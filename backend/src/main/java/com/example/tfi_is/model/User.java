@@ -17,7 +17,6 @@ import java.util.Collection;
 @AllArgsConstructor
 @Entity
 @Table(name = "user_")
-@Where(clause = "deleted = false")
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,7 +26,6 @@ public class User implements UserDetails {
     private String password;
     @Enumerated(EnumType.STRING)
     private Role role;
-    private boolean deleted;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
