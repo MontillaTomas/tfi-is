@@ -11,17 +11,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "medicamento")
+@Table(name = "medicine")
 public class Medicine {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idMedicine;
 
-    private String commercialName;  // nombreComercial
-    private String genericName;     // nombreGenerico
+    private String commercialName;
+    private String genericName;
 
     @ManyToOne
-    @JoinColumn(name = "idRecetaDigital")
-    private DigitalPrescription digitalPrescription; // RecetaDigital
+    @JoinColumn(name = "digital_prescription_id")
+    private DigitalPrescription digitalPrescription;
 }

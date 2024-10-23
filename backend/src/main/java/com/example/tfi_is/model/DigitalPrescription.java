@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "receta_digital")
+@Table(name = "digital_prescription")
 public class DigitalPrescription {
 
     @Id
